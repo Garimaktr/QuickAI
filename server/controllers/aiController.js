@@ -11,7 +11,7 @@ import { PDFParse } from "pdf-parse";
 //     api_key: process.env.CLOUDINARY_API_KEY ? "Loaded ✅" : "Missing ❌",
 //     api_secret: process.env.CLOUDINARY_API_SECRET ? "Loaded ✅" : "Missing ❌",
 // });
-import ImageKit from "imagekit";
+import ImageKit from "@imagekit/nodejs";
 
 const imagekit = new ImageKit({
     publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
