@@ -19,6 +19,8 @@ app.use(express.json())
 app.use(clerkMiddleware()) //all the requests should be passed using clerk middleware
 //The clerkMiddleware() function checks the request's cookies and headers for a session JWT and, if found, attaches the Auth object to the request object under the auth key.
 
+// Add this route in server.js
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 //when we will hit this route the corresponding funtion will be executed
 app.get('/',(req, res) => res.send("Server is Live!"))  
