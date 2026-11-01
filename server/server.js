@@ -14,11 +14,7 @@ const app=express();
 
 await connectCloudinary()
 
-//app.use(cors())  //all th erequest will be passed htrough cors
-app.use(cors({
-  origin: 'https://quick-ai-xdb5.vercel.app',
-  credentials: true
-}));
+app.use(cors())  //all th erequest will be passed htrough cors
 app.use(express.json())
 app.use(clerkMiddleware()) //all the requests should be passed using clerk middleware
 //The clerkMiddleware() function checks the request's cookies and headers for a session JWT and, if found, attaches the Auth object to the request object under the auth key.
