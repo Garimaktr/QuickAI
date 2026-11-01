@@ -11,12 +11,6 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "server.js"
-    }
-  ],
   "functions": {
     "server.js": {
       "includeFiles": "node_modules/@napi-rs/**/*"
